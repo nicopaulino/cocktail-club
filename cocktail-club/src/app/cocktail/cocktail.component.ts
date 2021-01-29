@@ -19,7 +19,7 @@ export class CocktailComponent implements OnInit {
 
 
   submit() {
-    this.cocktailService.get().subscribe(cocktail => {
+    this.cocktailService.get(this.cocktailName).subscribe(cocktail => {
       this.cocktail = cocktail;
       console.log(this.cocktail);
     });
